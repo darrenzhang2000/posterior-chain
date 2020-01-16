@@ -27,7 +27,7 @@ router.post('/', async function(req, res, next){
 
 router.put('/:id', async (req, res, next) =>{
   try{
-    console.log(req);
+    // console.log(req);
     let updatedCampusInfo = await Campus.update(req.query, {
       where: { id: req.params.id },
       returning: true,
@@ -38,6 +38,19 @@ router.put('/:id', async (req, res, next) =>{
   catch (err){
     next(err);
   }
+});
+
+router.delete('/:id', async (req, res, next) =>{
+    try{
+      const deleteCampus = await Campus.destroy({
+        where: { id: req.params.id },
+        plain: true
+      });
+      res.sendStatus(204);
+    }
+    catch(err){
+      next(err);
+    }
 });
 
 // Export our router, so that it can be imported to construct our apiRouter;

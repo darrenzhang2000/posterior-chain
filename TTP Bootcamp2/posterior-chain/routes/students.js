@@ -40,5 +40,18 @@ router.put('/:id', async (req, res, next) =>{
   }
 });
 
+router.delete('/:id', async (req, res, next) =>{
+  try{
+    const deleteStudent = await Student.destroy({
+      where: { id: req.params.id },
+      plain: true
+    });
+    res.sendStatus(204);
+  }
+  catch(err){
+    next(err);
+  }
+});
+
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
