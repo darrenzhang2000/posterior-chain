@@ -14,5 +14,18 @@ router.get('/:id', function(req, res, next){
   .catch(next)
 });
 
+router.post('/', async function(req, res, next){
+  try{
+    // console.log(req.query);
+    let student = await Student.create(req.query);
+    res.status(201).json (student);
+    console.log(Student.findById(100));
+  }
+  catch (err){
+    next(err);
+  }
+});
+
+
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;

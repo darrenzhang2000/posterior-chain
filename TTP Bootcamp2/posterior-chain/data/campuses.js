@@ -1,6 +1,5 @@
 const campuses = [
     {
-        id: 1,
         campusName: "Sheffield University",
         address1: "25-24 Spence Terrace",
         address2: "Dragon City, TN 24578",
@@ -10,7 +9,6 @@ const campuses = [
     },
     
     {
-        id: 2,
         campusName: "Swindlehurst University",
         address1: "59-13 Easley Way",
         address2: "Wind Harbor, AZ 16625",
@@ -20,7 +18,6 @@ const campuses = [
     },
     
     {
-        id: 3,
         campusName: "Pembroke College",
         address1: "656 Third Terrace",
         address2: "Vanillaheart, UT 73893",
@@ -30,7 +27,6 @@ const campuses = [
     },
     
     {
-        id: 4,
         campusName: "Kohaupt Institute of Technology",
         address1: "11-16 Sixth Lane",
         address2: "Southtown, NE 74065",
@@ -40,7 +36,6 @@ const campuses = [
     },
     
     {
-        id: 5,
         campusName: "Pemberton College",
         address1: "77-94 Saint Charles Loop",
         address2: "Mint Bay, MS 25323",
@@ -50,7 +45,6 @@ const campuses = [
     },
     
     {
-        id: 6,
         campusName: "Drever College",
         address1: "08-25 Easley Avenue",
         address2: "Vanilla Bay, CA 68412",
@@ -60,7 +54,6 @@ const campuses = [
     },
     
     {
-        id: 7,
         campusName: "Clanton University",
         address1: "995-55 Salmon Loop",
         address2: "Silverwood, MS 93382",
@@ -70,7 +63,6 @@ const campuses = [
     },
     
     {
-        id: 8,
         campusName: "Cavachon Normal School",
         address1: "59-88 Pine Place",
         address2: "Queens Ridge, SC 17465",
@@ -80,13 +72,12 @@ const campuses = [
     },
     
     {
-        id: 9,
         campusName: "Harden University",
         address1: "54-64 Cedar Terrace",
         address2: "Pine Beach, VA 72305",
         campusImage: "/images/campuses/campus01.jpg",
         description: "<campus description goes here>",
-        enrollments: [20, 34, 44, 49, 54, 60, 61, 63, 69, 75, 96],
+        enrollments: [20, 34, 44, 49, 54, 60    , 61, 63, 69, 75, 96],
     }
     
     ]
