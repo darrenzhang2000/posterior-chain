@@ -4,6 +4,11 @@ const db = require('../db');
 //enrollment array not included yet
 
 const Campus = db.define("campus", {
+  id: {
+    type: Sequelize.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
 
   campusName: {
     type: Sequelize.STRING,
@@ -29,6 +34,7 @@ const Campus = db.define("campus", {
     type: Sequelize.STRING,
     allowNull: false
   }
+
 
 });
 
