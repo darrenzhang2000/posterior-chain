@@ -8,5 +8,11 @@ router.get('/', function(req, res, next) {
     .catch(err => console.log(err))
 });
 
+router.get('/:id', function(req, res, next){
+  Student.findByPk(req.params.id)
+  .then(student => res.json(student))
+  .catch(next)
+});
+
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
