@@ -19,13 +19,26 @@ router.post('/', async function(req, res, next){
     // console.log(req.query);
     let student = await Student.create(req.query);
     res.status(201).json (student);
-    console.log(Student.findById(100));
   }
   catch (err){
     next(err);
   }
 });
 
+router.put('/:id', async (req, res, next) =>{
+  try{
+    // console.log(req);
+    let updatedStudentInfo = await Student.update(req.query, {
+      where: { id: req.params.id },
+      returning: true,
+      plain: true
+    });
+    res.status(200).json(updatedStudentInfo);
+  }
+  catch (err){
+    next(err);
+  }
+});
 
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;

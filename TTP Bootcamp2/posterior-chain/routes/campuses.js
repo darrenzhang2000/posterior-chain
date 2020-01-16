@@ -25,5 +25,20 @@ router.post('/', async function(req, res, next){
     }
   });
 
+router.put('/:id', async (req, res, next) =>{
+  try{
+    console.log(req);
+    let updatedCampusInfo = await Campus.update(req.query, {
+      where: { id: req.params.id },
+      returning: true,
+      plain: true
+    });
+    res.status(200).json(updatedCampusInfo);
+  }
+  catch (err){
+    next(err);
+  }
+});
+
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
